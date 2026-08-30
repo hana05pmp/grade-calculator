@@ -1,64 +1,175 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f4f7;
-    margin: 0;
-    padding: 40px;
+* {
+    box-sizing: border-box;
 }
+
+
+body {
+    margin: 0;
+
+    padding: 40px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f4f7;
+}
+
 
 .container {
     width: 500px;
+
     max-width: 100%;
+
     margin: auto;
-    background-color: white;
+
     padding: 30px;
+
+    background-color: white;
+
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 h1 {
     text-align: center;
+
     color: #2c3e50;
+
+    margin-bottom: 30px;
 }
+
 
 h2 {
     color: #34495e;
+
+    margin-top: 25px;
 }
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
 
 label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
+
+    margin-bottom: 6px;
+
     font-weight: bold;
+
+    color: #333;
 }
+
 
 input {
     width: 100%;
+
     padding: 12px;
+
     border: 1px solid #ccc;
+
     border-radius: 6px;
+
     font-size: 16px;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
+
+input:focus {
+    outline: none;
+
+    border-color: #3498db;
+}
+
+
+.buttons {
+    display: flex;
+
+    gap: 10px;
+
     margin-top: 25px;
+}
+
+
+button {
+    flex: 1;
+
+    padding: 12px;
+
     border: none;
+
     border-radius: 6px;
-    background-color: #3498db;
+
     color: white;
+
     font-size: 16px;
+
     cursor: pointer;
 }
 
-.result {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
+
+.calculate-btn {
+    background-color: #3498db;
 }
 
-.result span {
-    font-weight: bold;
-    float: right;
+
+.calculate-btn:hover {
+    background-color: #2980b9;
+}
+
+
+.reset-btn {
+    background-color: #e74c3c;
+}
+
+
+.reset-btn:hover {
+    background-color: #c0392b;
+}
+
+
+.result {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background-color: #f8f9fa;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #3498db;
+}
+
+
+.result h2 {
+    margin-top: 0;
+
+    text-align: center;
+}
+
+
+.result-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    font-size: 16px;
+}
+
+
+.result-row strong {
+    color: #2c3e50;
+}
+
+
+hr {
+    border: none;
+
+    border-top: 1px solid #ddd;
+
+    margin: 15px 0;
 }
