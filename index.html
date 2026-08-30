@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Grade Calculator</title>
+    <title>Student Grading Calculator</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,94 +14,182 @@
 
     <div class="container">
 
-        <h1>Student Grade Calculator</h1>
+        <h1>Student Grading Calculator</h1>
 
-        <label>Student Name</label>
-        <input
-            type="text"
-            id="studentName"
-            placeholder="Enter student name"
-        >
+        <!-- Student Name -->
+        <div class="form-group">
 
+            <label for="studentName">
+                Student Name
+            </label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter student name"
+            >
+
+        </div>
+
+
+        <!-- Marks -->
         <h2>Enter Marks</h2>
 
-        <label>Math</label>
-        <input
-            type="number"
-            id="math"
-            min="0"
-            max="100"
-        >
+        <div class="form-group">
 
-        <label>English</label>
-        <input
-            type="number"
-            id="english"
-            min="0"
-            max="100"
-        >
+            <label for="math">
+                Math
+            </label>
 
-        <label>Database</label>
-        <input
-            type="number"
-            id="database"
-            min="0"
-            max="100"
-        >
+            <input
+                type="number"
+                id="math"
+                placeholder="Enter Math mark"
+                min="0"
+                max="100"
+            >
 
-        <label>Programming</label>
-        <input
-            type="number"
-            id="programming"
-            min="0"
-            max="100"
-        >
+        </div>
 
-        <button onclick="calculateResult()">
-            Calculate Result
-        </button>
 
+        <div class="form-group">
+
+            <label for="english">
+                English
+            </label>
+
+            <input
+                type="number"
+                id="english"
+                placeholder="Enter English mark"
+                min="0"
+                max="100"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="database">
+                Database
+            </label>
+
+            <input
+                type="number"
+                id="database"
+                placeholder="Enter Database mark"
+                min="0"
+                max="100"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="programming">
+                Programming
+            </label>
+
+            <input
+                type="number"
+                id="programming"
+                placeholder="Enter Programming mark"
+                min="0"
+                max="100"
+            >
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button
+                onclick="calculateResult()"
+                class="calculate-btn"
+            >
+                Add / Calculate
+            </button>
+
+
+            <button
+                onclick="resetForm()"
+                class="reset-btn"
+            >
+                Reset / Clear
+            </button>
+
+        </div>
+
+
+        <!-- Result -->
         <div class="result">
 
-            <h2>Result</h2>
+            <h2>Student Result</h2>
 
-            <p>Student Name:
-                <span id="resultName">-</span>
-            </p>
 
-            <p>Math:
-                <span id="resultMath">-</span>
-            </p>
+            <div class="result-row">
+                <span>Student Name:</span>
+                <strong id="resultName">-</strong>
+            </div>
 
-            <p>English:
-                <span id="resultEnglish">-</span>
-            </p>
 
-            <p>Database:
-                <span id="resultDatabase">-</span>
-            </p>
+            <div class="result-row">
+                <span>Math:</span>
+                <strong id="resultMath">-</strong>
+            </div>
 
-            <p>Programming:
-                <span id="resultProgramming">-</span>
-            </p>
+
+            <div class="result-row">
+                <span>English:</span>
+                <strong id="resultEnglish">-</strong>
+            </div>
+
+
+            <div class="result-row">
+                <span>Database:</span>
+                <strong id="resultDatabase">-</strong>
+            </div>
+
+
+            <div class="result-row">
+                <span>Programming:</span>
+                <strong id="resultProgramming">-</strong>
+            </div>
+
 
             <hr>
 
-            <p>Total:
-                <span id="total">-</span>
-            </p>
 
-            <p>Average:
-                <span id="average">-</span>%
-            </p>
+            <div class="result-row">
+                <span>Total Marks:</span>
+                <strong id="total">-</strong>
+            </div>
 
-            <p>Grade:
-                <span id="grade">-</span>
-            </p>
+
+            <div class="result-row">
+                <span>Average:</span>
+                <strong id="average">-</strong>
+            </div>
+
+
+            <div class="result-row">
+                <span>Grade:</span>
+                <strong id="grade">-</strong>
+            </div>
+
+
+            <div class="result-row">
+                <span>Status:</span>
+                <strong id="status">-</strong>
+            </div>
 
         </div>
 
     </div>
+
 
     <script src="script.js"></script>
 
